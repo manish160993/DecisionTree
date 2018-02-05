@@ -6,6 +6,7 @@ import java.util.*;
 
 class Import{
 	
+	public ArrayList<String> ValueList = new ArrayList<String>();
 	ArrayList<String> import1(String s){
         ArrayList<String> data=new ArrayList<String>();
 		try {
@@ -33,7 +34,7 @@ class Import{
 	}
 	
 	public ArrayList<String> getInstances(ArrayList<String> lines) {
-		ArrayList<String> ValueList = new ArrayList<String>();
+		
 
 		for (int line = 1; line < lines.size(); line++) {
 			ValueList.add(lines.get(line));

@@ -11,7 +11,7 @@ class Node{
 	Node parent;
 	Node left=null;
 	Node right=null;
-	String splitKey=null;
+	String split=null;
 	HashMap<Integer,Double> entropy;
 	int decisionKey;
 	double totalZeroes;
@@ -19,7 +19,12 @@ class Node{
 	boolean purity=false;
 	String label;
 	
-	
+	void setSplit(String split){
+		this.split=split;
+	}
+	String getSplit(){
+		return this.split;
+	}
 	void setPurity(boolean purity){
 	this.purity=purity;
 	}
