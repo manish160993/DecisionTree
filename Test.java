@@ -11,6 +11,9 @@ class Test{
 	Import im=new Import();
 	//DecisionTree iD3= new DecisionTree();
 	
+	
+	/////Function called to calculate accuracy////
+	
 	double testAccuracy(String fileCSV,Node node){
 		ArrayList<String> lines=new ArrayList<String>();
 		
@@ -33,7 +36,7 @@ class Test{
 			else
 				falseClassified++;
 		}
-		//System.out.println("True classified:>>>>"+trueClassified+" size"+trueFalse.size()+" "+testData.size());
+		/////Formula for accuracy//////
 		accuracy= (trueClassified/(trueClassified+falseClassified))*100;
 		if(fileCSV.equalsIgnoreCase(Constant.validation)){
 			//System.out.println("Total Instances on validation data : "+testData.size());
@@ -122,7 +125,7 @@ class Test{
 	}
 	
 	
-	////////////////Used to increase accuracy ... 
+	////////////////Used to increase accuracy//////////////
 	ArrayList<String> add(Node root){
 		int k=0;
 		for(String s:Constant.testCases)

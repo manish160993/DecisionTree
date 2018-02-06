@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.*;
 
 class Node{
+	//Defining the characteristics associated with nodes//
 	int index;
 	ArrayList<String> data=null;
 	HashMap<Integer,String> features=null;

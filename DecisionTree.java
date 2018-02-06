@@ -22,7 +22,7 @@ class DecisionTree{
 		//System.out.println(root.data.size()+"rootsize1");
 	return nodeMap;
 	}
-	/*
+	/* Can be used to increase accuracy
 	HashMap<Integer,Node> dataToRoot1(ArrayList<String> CSV){
 		root.features=im.Features(CSV);
 		root.index=1;
@@ -40,6 +40,8 @@ class DecisionTree{
 	}
 	*/
 	
+	
+	///// Split the nodes and build decision tree/////
 	void splitRoot(HashMap<Integer,Node> nodeMap,int whichGain){
 		int max= Collections.max(nodeMap.keySet());
 		int gain=0;
@@ -90,28 +92,11 @@ class DecisionTree{
 				
 			}
 			
-			
-	//double d=t.testAccuracy(Constant.test,dataToRoot(im.import1(Constant.training)).get(1));
-	//System.out.println("Accuracy on test data :"+d+" %");
-			
-			//currentNode.entropy.put(currentNode.index,e);
-			//System.out.println(currentNode.totalZeroes+"  -----  "+currentNode.totalOnes+"------------"+currentNode.decisionKey+" max:"+max);
-			//break;
+	
 			max= Collections.max(nodeMap.keySet());
 			//it = nodeMap.entrySet().iterator();
 		}
-		//System.out.println();
-		/*for(int i=1;i<=max;i++)
-		{if(nodeMap.get(i)==null)
-				continue;
-			Node currentNode=nodeMap.get(i);
-				if((nodeMap.containsKey(currentNode.getIndex()*2+1))&&(nodeMap.containsKey(currentNode.getIndex()*2)))
-				{
-					if(nodeMap.get(currentNode.getIndex()*2+1).getLabel().equals(nodeMap.get(currentNode.getIndex()*2).getLabel()))
-					{currentNode.setPurity(true);nodeMap.remove(currentNode.getIndex()*2+1);nodeMap.remove(currentNode.getIndex()*2+1);}
-				}
-	}*/
-				
+			
 		
 	}
 	

@@ -3,13 +3,13 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.*;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
+//import javax.swing.text.html.HTMLDocument.Iterator;
 
 public class Prune1 {
-	//HashMap<Integer, Node> mapNodesCopy=null;
 	
 	
-	HashMap<Integer, Node> pruning(HashMap<Integer, Node> mapNodesCopy1, int K)
+	
+	HashMap<Integer, Node> pruning(HashMap<Integer, Node> mapNodesCopy1)
 	{
 		//System.out.println(mapNodesCopy.keySet());
 		HashMap<Integer, Node> afterPruningMapNodes=new HashMap<Integer,Node>();
@@ -45,10 +45,12 @@ public class Prune1 {
 		//for(Integer i:eligibleNodestobePruned)
 			//	System.out.print(i+" ");
 			//System.out.println();
-		int count=1;
+		int count=M;
 		int removeIndex;
+		if(count>eligibleNodestobePruned.size())
+			count=eligibleNodestobePruned.size();
 		//Random ran= new Random();
-		while(count<=M)
+		while(count>0)
 		{
 			removeIndex=eligibleNodestobePruned.get(ran.nextInt(eligibleNodestobePruned.size()));
 			//System.out.print(removeIndex+" ");
@@ -57,7 +59,7 @@ public class Prune1 {
 				continue;
 			else
 				NodestobePruned.add(removeIndex);
-			count++;
+			count--;
 			}
 			//if(count==totalNodesTobPruned)
 				//break;
